@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Cambia al directorio del proyecto
-cd /ruta/a/tu/repositorio
+cd /Users/alexandersandoval/Documents/GitHub/Docker_Airflow2
 
 # Verifica el estado del repositorio
 git status
