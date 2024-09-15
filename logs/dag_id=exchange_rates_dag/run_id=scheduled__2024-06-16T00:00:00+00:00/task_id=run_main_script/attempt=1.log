@@ -1,0 +1,23 @@
+[2024-09-01 19:15:50,862] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-06-16T00:00:00+00:00 [queued]>
+[2024-09-01 19:15:51,035] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-06-16T00:00:00+00:00 [queued]>
+[2024-09-01 19:15:51,047] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-01 19:15:51,052] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2024-09-01 19:15:51,063] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2024-09-01 19:15:51,268] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): run_main_script> on 2024-06-16 00:00:00+00:00
+[2024-09-01 19:15:51,326] {standard_task_runner.py:52} INFO - Started process 184 to run task
+[2024-09-01 19:15:51,378] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'exchange_rates_dag', 'run_main_script', 'scheduled__2024-06-16T00:00:00+00:00', '--job-id', '173', '--raw', '--subdir', 'DAGS_FOLDER/exchange_rates_dag.py', '--cfg-path', '/tmp/tmp1mnynoeh', '--error-file', '/tmp/tmpv7j78wqu']
+[2024-09-01 19:15:51,395] {standard_task_runner.py:80} INFO - Job 173: Subtask run_main_script
+[2024-09-01 19:15:52,614] {task_command.py:371} INFO - Running <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-06-16T00:00:00+00:00 [running]> on host 6de2165e2444
+[2024-09-01 19:15:53,603] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=exchange_rates_dag
+AIRFLOW_CTX_TASK_ID=run_main_script
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-16T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-16T00:00:00+00:00
+[2024-09-01 19:16:09,561] {python.py:173} INFO - Done. Returned value was: None
+[2024-09-01 19:16:09,670] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=exchange_rates_dag, task_id=run_main_script, execution_date=20240616T000000, start_date=20240901T191550, end_date=20240901T191609
+[2024-09-01 19:16:09,801] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-09-01 19:16:09,968] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

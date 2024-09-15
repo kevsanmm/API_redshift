@@ -1,0 +1,9 @@
+# Ignorar archivos de configuración sensible
+.env
+airflow.cfg
+
+# Ignorar archivos compilados de Python
+**/__pycache__/
+
+# Ignorar archivos de log
+logs/

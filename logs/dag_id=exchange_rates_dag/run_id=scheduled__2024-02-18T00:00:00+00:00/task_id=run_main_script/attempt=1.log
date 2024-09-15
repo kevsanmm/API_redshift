@@ -1,0 +1,12 @@
+[2024-09-08T16:09:28.334+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-08T16:09:28.504+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-02-18T00:00:00+00:00 [queued]>
+[2024-09-08T16:09:28.603+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-02-18T00:00:00+00:00 [queued]>
+[2024-09-08T16:09:28.622+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-08T16:09:28.834+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): run_main_script> on 2024-02-18 00:00:00+00:00
+[2024-09-08T16:09:28.920+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=404) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-08T16:09:28.942+0000] {standard_task_runner.py:72} INFO - Started process 413 to run task
+[2024-09-08T16:09:28.924+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'exchange_rates_dag', 'run_main_script', 'scheduled__2024-02-18T00:00:00+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/exchange_rates_dag.py', '--cfg-path', '/tmp/tmp_wz4vhe7']
+[2024-09-08T16:09:28.969+0000] {standard_task_runner.py:105} INFO - Job 67: Subtask run_main_script
+[2024-09-08T16:09:29.417+0000] {task_command.py:467} INFO - Running <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-02-18T00:00:00+00:00 [running]> on host bd0133ae5e03
+[2024-09-08T16:09:30.567+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_rates_dag' AIRFLOW_CTX_TASK_ID='run_main_script' AIRFLOW_CTX_EXECUTION_DATE='2024-02-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-02-18T00:00:00+00:00'
+[2024-09-08T16:09:30.574+0000] {taskinstance.py:731} INFO - ::endgroup::
