@@ -12,3 +12,5 @@ airflow.cfg
 *.log
 *.tmp
 *.bak
+
+.DS_Store
