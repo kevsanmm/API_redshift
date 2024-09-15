@@ -63,3 +63,21 @@ airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
 [2024-09-08T15:40:40.210+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 143
 [2024-09-08T15:40:40.730+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
 [2024-09-08T15:40:41.056+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-15T05:37:23.694+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-15T05:37:23.838+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-01-18T00:00:00+00:00 [queued]>
+[2024-09-15T05:37:23.940+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-01-18T00:00:00+00:00 [queued]>
+[2024-09-15T05:37:23.950+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-15T05:37:24.090+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): run_main_script> on 2024-01-18 00:00:00+00:00
+[2024-09-15T05:37:24.183+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=218) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-15T05:37:24.206+0000] {standard_task_runner.py:72} INFO - Started process 227 to run task
+[2024-09-15T05:37:24.179+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'exchange_rates_dag', 'run_main_script', 'scheduled__2024-01-18T00:00:00+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/exchange_rates_dag.py', '--cfg-path', '/tmp/tmpq5kymjil']
+[2024-09-15T05:37:24.218+0000] {standard_task_runner.py:105} INFO - Job 54: Subtask run_main_script
+[2024-09-15T05:37:24.631+0000] {task_command.py:467} INFO - Running <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-01-18T00:00:00+00:00 [running]> on host ed6b7035df5d
+[2024-09-15T05:37:25.511+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***docker@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_rates_dag' AIRFLOW_CTX_TASK_ID='run_main_script' AIRFLOW_CTX_EXECUTION_DATE='2024-01-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-18T00:00:00+00:00'
+[2024-09-15T05:37:25.525+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-15T05:38:18.396+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-15T05:38:18.410+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-15T05:38:18.412+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=exchange_rates_dag, task_id=run_main_script, run_id=scheduled__2024-01-18T00:00:00+00:00, execution_date=20240118T000000, start_date=20240915T053723, end_date=20240915T053818
+[2024-09-15T05:38:18.441+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-15T05:38:18.475+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T05:38:18.484+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

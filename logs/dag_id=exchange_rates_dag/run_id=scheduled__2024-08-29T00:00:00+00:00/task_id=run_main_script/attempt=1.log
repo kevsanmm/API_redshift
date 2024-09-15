@@ -21,3 +21,69 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-08-29T00:00:00+00:00
 [2024-09-01 19:19:58,654] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=exchange_rates_dag, task_id=run_main_script, execution_date=20240829T000000, start_date=20240901T191936, end_date=20240901T191958
 [2024-09-01 19:19:58,816] {local_task_job.py:156} INFO - Task exited with return code 0
 [2024-09-01 19:19:59,033] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T06:04:49.271+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-15T06:04:49.339+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-08-29T00:00:00+00:00 [queued]>
+[2024-09-15T06:04:49.378+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-08-29T00:00:00+00:00 [queued]>
+[2024-09-15T06:04:49.383+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-15T06:04:49.764+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): run_main_script> on 2024-08-29 00:00:00+00:00
+[2024-09-15T06:04:49.812+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=515) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-09-15T06:04:49.823+0000] {standard_task_runner.py:72} INFO - Started process 517 to run task
+[2024-09-15T06:04:49.801+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'exchange_rates_dag', 'run_main_script', 'scheduled__2024-08-29T00:00:00+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/exchange_rates_dag.py', '--cfg-path', '/tmp/tmpvvssqa_8']
+[2024-09-15T06:04:49.829+0000] {standard_task_runner.py:105} INFO - Job 277: Subtask run_main_script
+[2024-09-15T06:04:50.099+0000] {task_command.py:467} INFO - Running <TaskInstance: exchange_rates_dag.run_main_script scheduled__2024-08-29T00:00:00+00:00 [running]> on host ed6b7035df5d
+[2024-09-15T06:04:50.433+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='***docker@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='exchange_rates_dag' AIRFLOW_CTX_TASK_ID='run_main_script' AIRFLOW_CTX_EXECUTION_DATE='2024-08-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-29T00:00:00+00:00'
+[2024-09-15T06:04:50.453+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-15T06:05:05.514+0000] {local_task_job_runner.py:127} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-09-15T06:05:05.788+0000] {process_utils.py:132} INFO - Sending 15 to group 517. PIDs of all processes in the group: [522, 517]
+[2024-09-15T06:05:05.912+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 517
+[2024-09-15T06:05:05.998+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-09-15T06:05:06.388+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=522, status='terminated', started='06:04:49') (522) terminated with exit code None
+[2024-09-15T06:05:06.639+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/exchange_rates_dag.py", line 30, in run_main
+    subprocess.run(["python3", "/opt/airflow/main.py"], check=True)
+  File "/usr/local/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 1201, in communicate
+    self.wait()
+  File "/usr/local/lib/python3.12/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 2053, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/subprocess.py", line 2011, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2024-09-15T06:05:07.069+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=exchange_rates_dag, task_id=run_main_script, run_id=scheduled__2024-08-29T00:00:00+00:00, execution_date=20240829T000000, start_date=20240915T060449, end_date=20240915T060507
+[2024-09-15T06:05:08.368+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-15T06:05:08.647+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=517, status='terminated', exitcode=2, started='06:04:49') (517) terminated with exit code 2
+[2024-09-15T06:05:08.666+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 143
+[2024-09-15T06:05:09.483+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-15T06:05:09.843+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-09-15T06:05:09.848+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics

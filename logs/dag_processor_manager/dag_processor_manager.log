@@ -1900,3 +1900,517 @@ File Path                                PID    Runtime      # DAGs    # Errors 
 /opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T05:18:38                      12
 ================================================================================
 [2024-09-15T05:19:20.278+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T05:36:47.458+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T05:36:47.462+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T05:36:47.470+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T05:36:47.478+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T05:36:47.561+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T05:36:47.848+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    157  0.12s             0           0                                                   0
+================================================================================
+[2024-09-15T05:37:18.005+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.49s           2024-09-15T05:36:48                      12
+================================================================================
+[2024-09-15T05:37:48.549+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  1.81s           2024-09-15T05:37:20                      12
+================================================================================
+[2024-09-15T05:38:19.479+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  2.29s           2024-09-15T05:37:53                      12
+================================================================================
+[2024-09-15T05:38:49.839+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.17s           2024-09-15T05:38:23                      12
+================================================================================
+[2024-09-15T05:39:20.262+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.21s           2024-09-15T05:38:54                      12
+================================================================================
+[2024-09-15T05:39:50.685+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.21s           2024-09-15T05:39:24                      12
+================================================================================
+[2024-09-15T05:40:21.043+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.19s           2024-09-15T05:39:54                      12
+================================================================================
+[2024-09-15T05:40:36.499+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T05:45:55.413+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T05:45:55.425+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T05:45:55.431+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T05:45:55.441+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T05:45:55.535+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T05:45:55.994+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.17s             0           0                                                   0
+================================================================================
+[2024-09-15T05:46:26.445+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  1.14s           2024-09-15T05:45:56                      12
+================================================================================
+[2024-09-15T05:46:56.611+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T05:46:27                      12
+================================================================================
+[2024-09-15T05:47:26.700+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  2.41s           2024-09-15T05:47:00                      12
+================================================================================
+[2024-09-15T05:47:57.076+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.23s           2024-09-15T05:47:30                      12
+================================================================================
+[2024-09-15T05:48:27.460+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.30s           2024-09-15T05:48:01                      12
+================================================================================
+[2024-09-15T05:48:57.706+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.24s           2024-09-15T05:48:31                      12
+================================================================================
+[2024-09-15T05:49:27.979+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.17s           2024-09-15T05:49:01                      12
+================================================================================
+[2024-09-15T05:49:58.414+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.20s           2024-09-15T05:49:32                      12
+================================================================================
+[2024-09-15T05:50:28.708+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.17s           2024-09-15T05:50:02                      12
+================================================================================
+[2024-09-15T05:50:56.062+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T05:50:56.084+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T05:50:59.145+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T05:50:32                      12
+================================================================================
+[2024-09-15T05:51:29.423+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.23s           2024-09-15T05:51:03                      12
+================================================================================
+[2024-09-15T05:51:59.709+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T05:51:33                      12
+================================================================================
+[2024-09-15T05:52:30.186+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.23s           2024-09-15T05:52:04                      12
+================================================================================
+[2024-09-15T05:53:00.527+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.22s           2024-09-15T05:52:34                      12
+================================================================================
+[2024-09-15T05:53:30.792+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  1.35s           2024-09-15T05:53:06                      12
+================================================================================
+[2024-09-15T05:54:00.804+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.20s           2024-09-15T05:53:36                      12
+================================================================================
+[2024-09-15T05:54:30.882+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T05:54:07                      12
+================================================================================
+[2024-09-15T05:55:01.148+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.31s           2024-09-15T05:54:37                      12
+================================================================================
+[2024-09-15T05:55:22.047+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:00:06.347+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:00:06.356+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:00:06.366+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:00:06.371+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:00:06.461+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:00:06.893+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.17s             0           0                                                   0
+================================================================================
+[2024-09-15T06:00:37.173+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  2.18s           2024-09-15T06:00:08                      34
+================================================================================
+[2024-09-15T06:01:07.636+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  3.12s           2024-09-15T06:00:42                      12
+================================================================================
+[2024-09-15T06:01:38.282+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.46s           2024-09-15T06:01:13                      12
+================================================================================
+[2024-09-15T06:02:08.797+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.42s           2024-09-15T06:01:43                      12
+================================================================================
+[2024-09-15T06:02:39.179+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  1.00s           2024-09-15T06:02:14                      12
+================================================================================
+[2024-09-15T06:03:09.581+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.18s           2024-09-15T06:02:45                      12
+================================================================================
+[2024-09-15T06:03:39.912+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.82s           2024-09-15T06:03:16                      12
+================================================================================
+[2024-09-15T06:04:10.801+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.30s           2024-09-15T06:03:47                      12
+================================================================================
+[2024-09-15T06:04:41.346+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.27s           2024-09-15T06:04:18                      12
+================================================================================
+[2024-09-15T06:05:06.770+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:14:20.015+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:14:20.021+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:14:20.031+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:14:20.041+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:14:20.118+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:14:20.568+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.17s             0           0                                                   0
+================================================================================
+[2024-09-15T06:14:50.885+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    176  0.01s             0           1  0.49s           2024-09-15T06:14:20                       3
+================================================================================
+[2024-09-15T06:15:21.218+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    195  0.01s             0           1  0.10s           2024-09-15T06:14:50                       5
+================================================================================
+[2024-09-15T06:15:46.709+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:17:23.536+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:17:23.543+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:17:23.549+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:17:23.555+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:17:23.633+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:17:23.923+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.11s             0           0                                                   0
+================================================================================
+[2024-09-15T06:17:54.227+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    161  0.01s             0           1  0.28s           2024-09-15T06:17:24                       5
+================================================================================
+[2024-09-15T06:18:17.398+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:24:11.201+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:24:11.213+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:24:11.224+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:24:11.232+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:24:11.332+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:24:11.722+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    157  0.14s             0           0                                                   0
+================================================================================
+[2024-09-15T06:24:41.837+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.98s           2024-09-15T06:24:12                      34
+================================================================================
+[2024-09-15T06:25:12.016+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.52s           2024-09-15T06:24:43                      12
+================================================================================
+[2024-09-15T06:25:42.173+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  2.39s           2024-09-15T06:25:15                      12
+================================================================================
+[2024-09-15T06:26:12.587+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  2.98s           2024-09-15T06:25:49                      12
+================================================================================
+[2024-09-15T06:26:42.884+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.23s           2024-09-15T06:26:19                      12
+================================================================================
+[2024-09-15T06:27:00.807+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:28:14.807+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:28:14.816+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:28:14.826+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:28:14.835+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:28:14.939+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:28:15.397+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.19s             0           0                                                   0
+================================================================================
+[2024-09-15T06:28:45.520+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.96s           2024-09-15T06:28:16                      12
+================================================================================
+[2024-09-15T06:29:16.132+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.38s           2024-09-15T06:28:46                      12
+================================================================================
+[2024-09-15T06:29:35.011+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
+[2024-09-15T06:30:44.740+0000] {manager.py:486} INFO - Processing files using up to 2 processes at a time 
+[2024-09-15T06:30:44.750+0000] {manager.py:487} INFO - Process each file at most once every 30 seconds
+[2024-09-15T06:30:44.759+0000] {manager.py:488} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-09-15T06:30:44.765+0000] {manager.py:832} INFO - Searching for files in /opt/airflow/dags
+[2024-09-15T06:30:44.846+0000] {manager.py:835} INFO - There are 1 files in /opt/airflow/dags
+[2024-09-15T06:30:45.368+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    156  0.22s             0           0                                                   0
+================================================================================
+[2024-09-15T06:31:15.945+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    184  0.01s             0           1  0.59s           2024-09-15T06:30:45                       3
+================================================================================
+[2024-09-15T06:31:46.292+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    197  0.01s             0           1  0.10s           2024-09-15T06:31:16                       5
+================================================================================
+[2024-09-15T06:32:16.586+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    202  0.01s             0           1  0.10s           2024-09-15T06:31:46                       5
+================================================================================
+[2024-09-15T06:32:46.879+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py    207  0.01s             0           1  0.11s           2024-09-15T06:32:16                       5
+================================================================================
+[2024-09-15T06:33:17.251+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           0           1  0.12s           2024-09-15T06:33:16                       3
+================================================================================
+[2024-09-15T06:33:47.728+0000] {manager.py:1008} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/exchange_rates_dag.py                           1           0  0.36s           2024-09-15T06:33:42                      34
+================================================================================
+[2024-09-15T06:33:52.896+0000] {manager.py:468} INFO - Exiting gracefully upon receiving signal 15
