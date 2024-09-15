@@ -5,5 +5,10 @@ airflow.cfg
 # Ignorar archivos compilados de Python
 **/__pycache__/
 
-# Ignorar archivos de log
-logs/
+# Ignorar archivos de log en cualquier nivel
+**/logs/
+
+# Ignorar archivos temporales
+*.log
+*.tmp
+*.bak
