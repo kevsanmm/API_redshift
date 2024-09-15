@@ -14,3 +14,5 @@ git commit -m "Actualización automática"
 
 # Sube los cambios al repositorio remoto
 git push origin main
+
+# Ejecuta en la terminal ./push_changes.sh
