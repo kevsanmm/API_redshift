@@ -3,7 +3,7 @@
 airflow.cfg
 
 # Ignorar archivos compilados de Python
-**/__pycache__/
+**/__pycache__/ 
 
 # Ignorar archivos de log en cualquier nivel
 **/logs/
