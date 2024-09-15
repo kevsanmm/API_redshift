@@ -14,3 +14,4 @@ airflow.cfg
 *.bak
 
 .DS_Store
+push_changes.sh
