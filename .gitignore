@@ -3,15 +3,24 @@
 airflow.cfg
 
 # Ignorar archivos compilados de Python
-**/__pycache__/ 
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 # Ignorar archivos de log en cualquier nivel
 **/logs/
+*.log
 
 # Ignorar archivos temporales
-*.log
 *.tmp
 *.bak
+*.swp
 
+# Ignorar archivos de sistema
 .DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar scripts específicos
 push_changes.sh

@@ -2,15 +2,22 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
+# Cargar variables de entorno desde el archivo .env
 load_dotenv()
 
 def conectar_redshift():
+    host = os.getenv('REDSHIFT_HOST')
+    port = os.getenv('REDSHIFT_PORT')
+    dbname = os.getenv('REDSHIFT_DBNAME')
+    user = os.getenv('REDSHIFT_USER')
+    password = os.getenv('REDSHIFT_PASSWORD')
+    
     conn = psycopg2.connect(
-        host=os.getenv('REDSHIFT_HOST'),
-        port=os.getenv('REDSHIFT_PORT'),
-        dbname=os.getenv('REDSHIFT_DBNAME'),
-        user=os.getenv('REDSHIFT_USER'),
-        password=os.getenv('REDSHIFT_PASSWORD')
+        host=host,
+        port=port,
+        dbname=dbname,
+        user=user,
+        password=password
     )
     cur = conn.cursor()
     return conn, cur
@@ -21,7 +28,7 @@ def eliminar_registros(cur, rates_df):
     for _, row in unique_keys.iterrows():
         cur.execute(delete_query, (row['Currency'], row['Date']))
 
-def insertar_datos(cur, conn, rates_df, base_currency):
+def insertar_datos(cur, conn, rates_df, base_currency, date):
     insert_query = '''
     INSERT INTO exchange_rates (base, date, currency, rate, ingestion_time, country, region, continent, wealthy) 
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);

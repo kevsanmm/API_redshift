@@ -1,6 +1,11 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from datetime import datetime, timedelta
+from airflow.operators.dummy_operator import DummyOperator
+from airflow.utils.dates import days_ago
+from datetime import timedelta
+import pandas as pd
+from airflow.utils.email import send_email
+
 from modules.data_fetcher import obtener_datos
 from modules.data_preprocessing import procesar_datos
 from modules.utils import conectar_redshift, eliminar_registros, insertar_datos, cerrar_conexion
@@ -8,81 +13,109 @@ from modules.utils import conectar_redshift, eliminar_registros, insertar_datos,
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2023, 9, 14),
-    'email': ['airflowdocker@gmail.com'],
-    'email_on_failure': True,
-    'email_on_retry': True,
+    'start_date': days_ago(1),
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
+    'email': ['airflowdocker@gmail.com'],  # Dirección de correo electrónico para alertas
+    'email_on_failure': True,  # Enviar correo para fallas en tareas individuales
+    'email_on_retry': False,   # Deshabilitar correo para reintentos
+    'email_on_success': False,  # Deshabilitar correo para éxito en tareas individuales
 }
 
-def task_obtener_datos(**kwargs):
-    rates_df, base_currency, _ = obtener_datos()
-    if rates_df is None:
-        raise ValueError("El DataFrame obtenido es None.")
-    kwargs['ti'].xcom_push(key='rates_df', value=rates_df)
-    kwargs['ti'].xcom_push(key='base_currency', value=base_currency)
+def fetch_data(**kwargs):
+    try:
+        rates_df, base_currency, date = obtener_datos()
+        kwargs['ti'].xcom_push(key='rates_df', value=rates_df.to_json())
+        kwargs['ti'].xcom_push(key='base_currency', value=base_currency)
+        kwargs['ti'].xcom_push(key='date', value=date)
+    except Exception as e:
+        raise ValueError(f"Error fetching data: {e}")
 
-def task_procesar_datos(**kwargs):
-    rates_df = kwargs['ti'].xcom_pull(key='rates_df')
-    if rates_df is None:
-        raise ValueError("El DataFrame recibido es None.")
-    processed_df = procesar_datos(rates_df)
-    kwargs['ti'].xcom_push(key='processed_df', value=processed_df)
+def process_data(**kwargs):
+    try:
+        rates_df_json = kwargs['ti'].xcom_pull(task_ids='fetch_data', key='rates_df')
+        rates_df = pd.read_json(rates_df_json)
+        date = kwargs['ti'].xcom_pull(task_ids='fetch_data', key='date')
+        processed_df = procesar_datos(rates_df, date)
+        kwargs['ti'].xcom_push(key='processed_df', value=processed_df.to_json())
+        kwargs['ti'].xcom_push(key='base_currency', value=kwargs['ti'].xcom_pull(task_ids='fetch_data', key='base_currency'))
+    except Exception as e:
+        raise ValueError(f"Error processing data: {e}")
 
-def task_eliminar_registros(**kwargs):
-    processed_df = kwargs['ti'].xcom_pull(key='processed_df')
-    conn, cur = conectar_redshift()  # Crear la conexión y el cursor aquí
-    eliminar_registros(cur, processed_df)
-    conn.commit()  # Asegurarse de hacer commit si es necesario
+def load_to_redshift(**kwargs):
+    try:
+        processed_df_json = kwargs['ti'].xcom_pull(task_ids='process_data', key='processed_df')
+        processed_df = pd.read_json(processed_df_json)
+        base_currency = kwargs['ti'].xcom_pull(task_ids='process_data', key='base_currency')
+        date = kwargs['ti'].xcom_pull(task_ids='fetch_data', key='date')
+        
+        conn, cur = conectar_redshift()
+        
+        eliminar_registros(cur, processed_df)
+        insertar_datos(cur, conn, processed_df, base_currency, date)
+        
+        cerrar_conexion(cur, conn)
+    except Exception as e:
+        raise ValueError(f"Error loading data to Redshift: {e}")
 
-def task_insertar_datos(**kwargs):
-    processed_df = kwargs['ti'].xcom_pull(key='processed_df')
-    base_currency = kwargs['ti'].xcom_pull(key='base_currency')
-    conn, cur = conectar_redshift()  # Crear la conexión y el cursor aquí
-    insertar_datos(cur, conn, processed_df, base_currency)
-    conn.commit()  # Asegurarse de hacer commit si es necesario
+def send_success_email(**kwargs):
+    send_email(
+        to='airflowdocker@gmail.com',
+        subject='DAG Success Confirmation',
+        html_content='The DAG has completed successfully, and the email notification was sent.'
+    )
 
-def task_cerrar_conexion(**kwargs):
-    conn, cur = conectar_redshift()  # Crear la conexión y el cursor aquí
-    cerrar_conexion(cur, conn)
+def on_failure_callback(context):
+    send_email(
+        to='airflowdocker@gmail.com',
+        subject='DAG Failure Notification',
+        html_content='The DAG has failed. Please check the logs for details.'
+    )
 
-with DAG(
-    'procesar_e_insertar_datos_completo',
+dag = DAG(
+    'exchange_rates_dag',
     default_args=default_args,
-    description='DAG para obtener, procesar e insertar datos de tasas de cambio en Redshift',
-    schedule_interval=timedelta(days=1),
-    catchup=False,
-) as dag:
+    description='A DAG to fetch, process, and load exchange rates',
+    schedule_interval='@daily',
+    on_failure_callback=on_failure_callback,
+)
 
-    obtener_datos_task = PythonOperator(
-        task_id='obtener_datos_de_api',
-        python_callable=task_obtener_datos,
-        provide_context=True
-    )
+fetch_task = PythonOperator(
+    task_id='fetch_data',
+    python_callable=fetch_data,
+    provide_context=True,
+    dag=dag,
+)
 
-    procesar_datos_task = PythonOperator(
-        task_id='procesar_datos',
-        python_callable=task_procesar_datos,
-        provide_context=True
-    )
+process_task = PythonOperator(
+    task_id='process_data',
+    python_callable=process_data,
+    provide_context=True,
+    dag=dag,
+)
 
-    eliminar_registros_task = PythonOperator(
-        task_id='eliminar_registros_antiguos',
-        python_callable=task_eliminar_registros,
-        provide_context=True
-    )
+load_task = PythonOperator(
+    task_id='load_to_redshift',
+    python_callable=load_to_redshift,
+    provide_context=True,
+    dag=dag,
+)
 
-    insertar_datos_task = PythonOperator(
-        task_id='insertar_datos_nuevos',
-        python_callable=task_insertar_datos,
-        provide_context=True
-    )
+email_success_task = PythonOperator(
+    task_id='email_success_sent',
+    python_callable=send_success_email,
+    provide_context=True,
+    dag=dag,
+)
 
-    cerrar_conexion_task = PythonOperator(
-        task_id='cerrar_conexion_redshift',
-        python_callable=task_cerrar_conexion,
-        provide_context=True
-    )
+start = DummyOperator(
+    task_id='start',
+    dag=dag,
+)
 
-    obtener_datos_task >> procesar_datos_task >> eliminar_registros_task >> insertar_datos_task >> cerrar_conexion_task
+end = DummyOperator(
+    task_id='end',
+    dag=dag,
+)
+
+start >> fetch_task >> process_task >> load_task >> email_success_task >> end
