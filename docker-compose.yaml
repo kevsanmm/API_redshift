@@ -14,13 +14,11 @@ x-airflow-common:
     REDSHIFT_USER: ${REDSHIFT_USER}
     REDSHIFT_PASSWORD: ${REDSHIFT_PASSWORD}
   volumes:
-    - ./dags:/opt/airflow/dags
+    - ./dags:/opt/airflow/dags         # Solo la carpeta de DAGs es necesaria
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - ./requirements.txt:/requirements.txt
-    - ./main.py:/opt/airflow/main.py
-    - ./scripts:/opt/airflow/scripts
-    - ./airflow.cfg:/opt/airflow/airflow.cfg
+    - ./requirements.txt:/requirements.txt  # Mantener si tienes dependencias adicionales
+    - ./airflow.cfg:/opt/airflow/airflow.cfg  # Archivo de configuración de Airflow
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     postgres:
