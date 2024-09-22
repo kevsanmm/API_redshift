@@ -69,5 +69,5 @@ docker-compose run --rm airflow-init
 
 4. Acceder a la interfaz web de Airflow: Abre tu navegador y ve a http://localhost:8080 para acceder a la interfaz de Airflow.
 
-Este README ahora incluye toda la información necesaria sobre el flujo de trabajo, requisitos, ejecución del proyecto y configuración con Docker.
+Este README incluye toda la información necesaria sobre el flujo de trabajo, requisitos, ejecución del proyecto y configuración con Docker.
 
